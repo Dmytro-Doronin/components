@@ -1,4 +1,4 @@
-import heroImage from '../../../assets/hero.png';
+import heroImage from '../../../assets/images/hero.png';
 
 export const Hero = () => {
   return (
@@ -11,7 +11,7 @@ export const Hero = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-[24px] text-center">
+      <div className="relative z-10 container-centered mx-auto px-[24px] text-center">
         <h1 className="text-7xl font-bold text-white mb-[24px]">
           Need a tutor?
         </h1>

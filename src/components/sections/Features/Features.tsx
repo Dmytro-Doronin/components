@@ -1,7 +1,7 @@
 import { FeatureCard } from './FeatureCard';
-import icon1 from '../../../assets/home-section1-icon.svg';
-import icon2 from '../../../assets/home-section1-icon2.svg';
-import icon3 from '../../../assets/home-section1-icon3.svg';
+import icon1 from '../../../assets/icons/home-section1-icon.svg';
+import icon2 from '../../../assets/icons/home-section1-icon2.svg';
+import icon3 from '../../../assets/icons/home-section1-icon3.svg';
 
 const features = [
   {
@@ -24,7 +24,7 @@ const features = [
 export const Features = () => {
   return (
     <section className="section-spacing">
-      <div className="container mx-auto px-[26px]">
+      <div className="container-centered mx-auto px-[26px]">
         <div className="text-center mb-[64px]">
           <p className="text-blue-400 text-sm font-semibold tracking-wider uppercase mb-[16px]">
             For Students

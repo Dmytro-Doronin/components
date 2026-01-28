@@ -1,0 +1,60 @@
+@layer components {
+    .text-gradient {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #7186FF, #FE7587);
+    }
+
+    .section-spacing {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .container-centered {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .card-glass {
+        background-color: #11182780;
+        backdrop-filter: blur(12px);
+        border: 1px solid #FFFFFF1A;
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .card-glass:hover {
+        border-color: #6F5DE980;
+    }
+
+    .card-glass-center {
+        background-color: #11182780;
+        backdrop-filter: blur(12px);
+        border: 1px solid #FFFFFF1A;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .card-glass-center:hover {
+        border-color: #6F5DE980;
+    }
+
+    .card-subject {
+        background-color: #1F293780;
+        backdrop-filter: blur(12px);
+        border: 1px solid #FFFFFF1A;
+        border-radius: 1rem;
+        padding: 1.5rem 2rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card-subject:hover {
+        border-color: #6F5DE980;
+        background-color: #1F2937B3;
+    }
+}
