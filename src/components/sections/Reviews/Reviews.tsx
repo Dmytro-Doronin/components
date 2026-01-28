@@ -1,6 +1,5 @@
 import { ReviewCard } from './ReviewCard';
-import arrowLeft from '../../../assets/icons/Left arrow.svg';
-import arrowRight from '../../../assets/icons/Right Arrow.svg';
+import { Button } from '../../ui/button/Button';
 import avatar1 from '../../../assets/images/Avatar.png';
 import avatar2 from '../../../assets/images/Avatar2.png';
 import avatar3 from '../../../assets/images/Avatar3.png';
@@ -24,6 +23,24 @@ const reviews = [
     name: 'Jenny Wilson',
     course: 'Frontend Developer',
     review: 'The Frontend Development course is well-structured and easy to follow, even for complex topics. It provided strong practical skills and boosted confidence in real-world projects.',
+  },
+  {
+    avatar: avatar1,
+    name: 'Robert Fox',
+    course: 'German',
+    review: 'The German course offers a great balance of grammar and conversation practice. The structured approach makes learning efficient and enjoyable.',
+  },
+  {
+    avatar: avatar2,
+    name: 'Kristin Watson',
+    course: 'Backend Development',
+    review: 'The Backend Development course covers all essential topics with practical examples. The instructor explains complex concepts in an easy-to-understand way.',
+  },
+  {
+    avatar: avatar3,
+    name: 'Darrell Steward',
+    course: 'QA / Software Testing',
+    review: 'The QA course provides comprehensive knowledge of testing methodologies. Real-world projects help apply learned concepts effectively.',
   }
 ];
 
@@ -40,7 +57,7 @@ export const Reviews = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] max-w-7xl mx-auto mb-[48px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[60px] max-w-7xl mx-auto">
           {reviews.map((review, index) => (
             <div key={index} className="relative">
               <img 
@@ -55,13 +72,8 @@ export const Reviews = () => {
           ))}
         </div>
 
-        <div className="flex justify-center gap-[16px]">
-          <button className="">
-            <img src={arrowLeft} alt="Previous" className="w-[24px] h-[24px]" />
-          </button>
-          <button className="">
-            <img src={arrowRight} alt="Next" className="w-[24px] h-[24px]" />
-          </button>
+        <div className="flex justify-center mt-[60px]">
+          <Button variant="secondary">More</Button>
         </div>
       </div>
     </section>

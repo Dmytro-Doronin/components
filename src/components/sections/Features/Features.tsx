@@ -1,4 +1,5 @@
 import { FeatureCard } from './FeatureCard';
+import { Button } from '../../ui/button/Button';
 import icon1 from '../../../assets/icons/home-section1-icon.svg';
 import icon2 from '../../../assets/icons/home-section1-icon2.svg';
 import icon3 from '../../../assets/icons/home-section1-icon3.svg';
@@ -41,6 +42,10 @@ export const Features = () => {
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
+        </div>
+
+        <div className="flex justify-center mt-[87px]">
+          <Button variant="secondary">More</Button>
         </div>
       </div>
     </section>
