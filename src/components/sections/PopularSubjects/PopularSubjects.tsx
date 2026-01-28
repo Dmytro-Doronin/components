@@ -29,7 +29,7 @@ export const PopularSubjects = () => {
               On our platform, you can learn a wide range of foreign languages and programming subjects — all in one place.
             </p>
             
-            <h2 className="text-[74px] font-bold">
+            <h2 className="text-[74px] font-bold w-[394px] leading-tight">
               <span className="text-gradient">
                 Popular subjects & Languages
               </span>
