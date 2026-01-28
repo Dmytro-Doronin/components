@@ -4,6 +4,7 @@ import { PopularSubjects } from '../../components/sections/PopularSubjects/Popul
 import { OurClients } from '../../components/sections/OurClients/OurClients';
 import { Reviews } from '../../components/sections/Reviews/Reviews';
 
+
 export const Home = () => {
   return (
     <div className="min-h-screen">
