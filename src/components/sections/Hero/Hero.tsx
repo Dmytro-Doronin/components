@@ -12,17 +12,17 @@ export const Hero = () => {
       </div>
 
       <div className="relative z-10 container-centered mx-auto px-[24px] text-center">
-        <h1 className="text-7xl font-bold text-white mb-[24px]">
+        <h1 className="text-[40px] md:text-[48px] lg:text-[54px] xl:text-7xl font-bold text-white mb-[16px] lg:mb-[19px] xl:mb-[24px]">
           Need a tutor?
         </h1>
         
-        <h2 className="text-7xl font-bold mb-[32px]">
+        <h2 className="text-[40px] md:text-[48px] lg:text-[54px] xl:text-7xl font-bold leading-tight mb-[16px] lg:mb-[20px] xl:mb-[32px]">
           <span className="text-gradient">
             Choose the best with ByteOn!
           </span>
         </h2>
 
-        <p className="text-white/90 text-xl mb-[80px] max-w-2xl mx-auto">
+        <p className="text-white/90 text-base lg:text-lg xl:text-xl mb-[228px] xl:mb-[80px] max-w-2xl mx-auto">
           Quickly choose, pay, and receive a video call with your tutor!
         </p>
       </div>
