@@ -52,9 +52,4 @@
         transition: all 0.3s ease;
         cursor: pointer;
     }
-
-    .card-subject:hover {
-        border-color: #6F5DE980;
-        background-color: #1F2937B3;
-    }
 }
