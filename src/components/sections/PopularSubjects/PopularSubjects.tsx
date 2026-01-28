@@ -1,5 +1,5 @@
 import { SubjectCard } from './SubjectCard';
-import bgImage from '../../../assets/bg-popular-subjects.png';
+import bgImage from '../../../assets/images/bg-popular-subjects.png';
 
 const subjects = [
   'English',
@@ -22,7 +22,7 @@ export const PopularSubjects = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-[24px]">
+      <div className="relative z-10 container-centered mx-auto px-[24px]">
         <div className="grid grid-cols-2 gap-[64px] items-start max-w-7xl mx-auto">
           <div className="flex flex-col gap-[311px]">
             <p className="text-white/70 text-base w-[270px] h-[108px] leading-relaxed">
