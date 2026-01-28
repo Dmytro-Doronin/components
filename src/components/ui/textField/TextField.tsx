@@ -9,7 +9,8 @@ import type {
 import React, { forwardRef, useId, useImperativeHandle, useRef, useState } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
-
+import Eye from "../../icons/Eye.tsx";
+import ClosedEye from "../../icons/ClosedEye.tsx";
 export type TextFieldProps = {
     onValueChange?: (value: string) => void;
     errorMessage?: string;
@@ -34,6 +35,7 @@ const rootStyles = cva("w-full hover:cursor-text flex flex-col items-start", {
 
 const fieldContainerStyles = cva(
     [
+        "relative",
         "grid grid-cols-[1fr_auto] items-center",
         "transition",
         "border",
@@ -99,8 +101,24 @@ const labelStyles = cva("mb-0.5 text-[12px]", {
 });
 
 const iconStyles = "mr-2 transition";
-const showPasswordBtnStyles =
-    "absolute top-1/2 right-[1%] -translate-y-1/2 w-5 h-5 mr-1.5 p-0 bg-transparent border-0 outline-none cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-outline-focus";
+const showPasswordBtnStyles = cva(
+    [
+        "absolute top-1/2 right-[1%] -translate-y-1/2",
+        "w-5 h-5 mr-[25px] p-0",
+        "bg-transparent border-0 outline-none cursor-pointer",
+        "focus-visible:outline focus-visible:outline-2 focus-visible:outline-outline-focus",
+        "inline-flex items-center justify-center",
+    ].join(" "),
+    {
+        variants: {
+            variant: {
+                primary: "text-dark-400",
+                secondary: "text-light-500",
+            },
+        },
+        defaultVariants: { variant: "primary" },
+    }
+);
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     (
@@ -164,12 +182,12 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 
                         {isPassword && (
                             <button
-                                className={showPasswordBtnStyles}
+                                className={showPasswordBtnStyles({variant})}
                                 type="button"
                                 onClick={() => setShowPassword((prev) => !prev)}
                                 aria-label={showPassword ? "Hide password" : "Show password"}
                             >
-                                {/* eye icon */}
+                                {showPassword ? <ClosedEye /> : <Eye />}
                             </button>
                         )}
                     </div>

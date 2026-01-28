@@ -1,6 +1,6 @@
 import { Hero } from '../../components/sections/Hero/Hero';
 import { Features } from '../../components/sections/Features/Features';
-import { PopularSubjects } from '../../components/sections/PopularSubjects/PopularSubjects';
+import {PopularSubjects} from "../../components/sections/PopularSubjects/PopularSubjects.tsx";
 
 export const Home = () => {
   return (
