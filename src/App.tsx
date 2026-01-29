@@ -1,7 +1,7 @@
 import './App.css'
 
 import {Header} from "./components/header/Header.tsx";
-import {LoginPage} from "./pages/loginPage/LoginPage.tsx";
+import {SignUpPage} from "./pages/signUpPage/SignUpPage.tsx";
 
 function App() {
   // return <Home />
@@ -9,7 +9,7 @@ function App() {
         <>
             <Header/>
             <main className="pt-[var(--header-height)]">
-                <LoginPage/>
+                <SignUpPage/>
             </main>
         </>
 

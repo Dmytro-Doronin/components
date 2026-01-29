@@ -30,6 +30,13 @@
         @apply grid grid-cols-2 gap-[24px];
     }
 
+    .auth-fields > :only-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 100%;
+        max-width: 518px;
+    }
+
     .auth-actions {
         @apply flex flex-col items-center mt-[40px];
     }
