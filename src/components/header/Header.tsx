@@ -24,13 +24,13 @@ export const Header = () => {
                     backdrop-blur-[12px]
                 "
             >
-                <div className="flex items-center justify-between mx-auto max-w-[1440px] h-full px-[151px]">
+                <div className="flex items-center justify-between mx-auto max-w-[1440px] h-full px-4 sm:px-6 md:px-8 lg:px-[151px]">
                     <Logo/>
-                    <div className='flex justify-center gap-7 border border-[#ffffff15] rounded-[20px] px-[38px]'>
-                        <Button className='p-0 text-[#ffffff60] hover:text-light-100' variant='link'>Tutors</Button>
-                        <Button className='p-0 text-[#ffffff60] hover:text-light-100' variant='link'>I want be tutor</Button>
+                    <div className='hidden md:flex justify-center gap-4 sm:gap-6 lg:gap-7 border border-[#ffffff15] rounded-[20px] px-4 sm:px-6 lg:px-[38px]'>
+                        <Button className='p-0 text-[#ffffff60] hover:text-light-100 text-sm sm:text-base' variant='link'>Tutors</Button>
+                        <Button className='p-0 text-[#ffffff60] hover:text-light-100 text-sm sm:text-base' variant='link'>I want be tutor</Button>
                     </div>
-                    <Button variant='secondary' className='hidden lg:block'>Sign in</Button>
+                    <Button variant='secondary' className='hidden lg:block text-sm sm:text-base px-3 sm:px-4'>Sign in</Button>
                     <MenuButton 
                         onClick={handleMobileMenuToggle}
                         isOpen={isMobileMenuOpen}
