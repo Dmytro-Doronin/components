@@ -1,4 +1,5 @@
 import { SubjectCard } from './SubjectCard';
+import { Button } from '../../ui/button/Button';
 import bgImage from '../../../assets/images/bg-popular-subjects.png';
 
 const subjects = [
@@ -24,10 +25,13 @@ export const PopularSubjects = () => {
 
       <div className="relative z-10 container-centered mx-auto px-[24px]">
         <div className="grid grid-cols-2 gap-[64px] items-start max-w-7xl mx-auto">
-          <div className="flex flex-col gap-[311px]">
-            <p className="text-white/70 text-base w-[270px] h-[108px] leading-relaxed">
-              On our platform, you can learn a wide range of foreign languages and programming subjects — all in one place.
-            </p>
+          <div className="flex flex-col gap-[350px] -mt-[60px]">
+            <div>
+              <p className="text-white/70 text-base w-[270px] h-[108px] leading-relaxed mb-[24px]">
+                On our platform, you can learn a wide range of foreign languages and programming subjects — all in one place.
+              </p>
+              <Button variant="secondary">Start</Button>
+            </div>
             
             <h2 className="text-[74px] font-bold w-[394px] leading-tight">
               <span className="text-gradient">
@@ -36,7 +40,7 @@ export const PopularSubjects = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col gap-[16px]">
+          <div className="flex flex-col gap-[32px]">
             {subjects.map((subject, index) => (
               <SubjectCard key={index} title={subject} />
             ))}

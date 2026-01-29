@@ -64,7 +64,6 @@ export const SelectComponent = <TValue extends string = string>({
                     group
                     w-[400px] h-[52px]
                     px-[40px] py-[8px]
-                    mb-[20px]
                     rounded-[60px]
                     border border-[#FFFFFF26]
                     flex items-center justify-center

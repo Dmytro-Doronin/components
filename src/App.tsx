@@ -3,7 +3,11 @@ import './App.css'
 import {Home} from "./pages/Home/Home.tsx";
 
 function App() {
-  return <Home />
+  return (
+    <>
+      <Home />
+    </>
+  )
   //   type SortDirection = (typeof selectOptions)[number]['value'];
   //
   //   const selectOptions = [
