@@ -9,7 +9,7 @@ interface ReviewCardProps {
 
 export const ReviewCard = ({ avatar, name, course, review }: ReviewCardProps) => {
   return (
-    <div className="w-[343px] h-[235px]">
+    <div className="w-full max-w-[343px] h-[235px] mx-auto">
       <div className="bg-[#15141D] rounded-2xl p-[25px] h-full flex flex-col overflow-hidden">
         <div className="flex items-center gap-[16px] mb-[20px] flex-shrink-0">
           <img 
@@ -18,7 +18,7 @@ export const ReviewCard = ({ avatar, name, course, review }: ReviewCardProps) =>
             className="w-[40px] h-[40px] rounded-full object-cover flex-shrink-0"
           />
           <div className="flex-1 min-w-0">
-            <h4 className="text-white font-semibold text-base truncate">{name}</h4>
+            <h4 className="text-white font-semibold text-base">{name}</h4>
             <p className="text-white/60 text-sm truncate">{course}</p>
           </div>
           <img 
