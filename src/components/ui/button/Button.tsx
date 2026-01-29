@@ -22,6 +22,10 @@ const buttonStyles = cva(
                 tertiary: "bg-dark-700 border border-dark-500 text-white hover:brightness-95",
                 link: "bg-transparent text-light-100",
             },
+            size: {
+                default: "min-h-10 px-[55px] py-3.5",
+                auth: "min-h-12 px-[70px] py-[21px]",
+            },
             fullWidth: { true: "w-full", false: "" },
         },
         defaultVariants: { variant: "primary", fullWidth: false },
@@ -41,12 +45,12 @@ type PolymorphicProps<T extends ElementType> = {
 export const Button = <T extends ElementType = "button">(
     props: PolymorphicProps<T>
 ) => {
-    const { as, children, className, variant, fullWidth, ...rest } = props;
+    const { as, children, className, variant, fullWidth, size, ...rest } = props;
     const Component = (as ?? "button") as ElementType;
 
     return (
         <Component
-            className={twMerge(buttonStyles({ variant, fullWidth }), className)}
+            className={twMerge(buttonStyles({ variant, fullWidth, size }), className)}
             {...rest}
         >
             {children}

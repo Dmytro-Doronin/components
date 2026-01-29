@@ -1,0 +1,56 @@
+@layer components {
+    .auth-page {
+        @apply w-full flex items-center justify-center px-4;
+    }
+
+    .auth-form {
+        @apply w-full max-w-[1326px] px-[150px] py-[100px] bg-bg-secondary mt-[30px] rounded-[20px] border border-dark-600;
+    }
+
+    .auth-title {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #7186FF, #FE7587);
+
+        @apply font-bold leading-tight text-center
+        text-[40px] md:text-[48px] lg:text-[54px] xl:text-7xl
+        mb-[20px] xl:mb-[32px];
+    }
+
+    .auth-subtitle {
+        @apply text-center font-bold text-[18px] leading-[1] text-light-300;
+    }
+
+    .auth-content {
+        @apply mt-[80px] flex flex-col gap-[24px];
+    }
+
+    .auth-fields {
+        @apply flex gap-[24px];
+    }
+
+    .auth-actions {
+        @apply flex flex-col items-center mt-[40px];
+    }
+
+    .auth-actions-inner {
+        @apply w-full max-w-[518px] flex flex-col gap-[24px] mb-[24px];
+    }
+
+    .auth-link-underline {
+        @apply p-0 underline font-bold text-[18px] leading-[1.5] text-center;
+    }
+
+    .auth-divider {
+        @apply w-full max-w-[518px] flex items-center gap-[20px] mb-[30px];
+    }
+
+    .auth-divider-line {
+        @apply h-px flex-1 bg-[var(--color-light-300)];
+    }
+
+    .auth-divider-text {
+        @apply text-[18px] text-[var(--color-light-300)];
+    }
+}
