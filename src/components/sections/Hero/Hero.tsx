@@ -39,7 +39,7 @@ export const Hero = () => {
         </p>
 
         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-2xl lg:max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-125 lg:w-155 h-15 sm:h-17 lg:h-20 bg-[#27222EB3] rounded-[30px] sm:rounded-[45px] lg:rounded-[60px] -z-10"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block w-[620px] h-[80px] bg-[#27222EB3] rounded-[60px] -z-10"></div>
           <SelectComponent 
             options={subjects}
             defaultValue="english"
