@@ -45,7 +45,7 @@ const fieldContainerStyles = cva(
         variants: {
             variant: {
                 primary: "bg-dark-800 border-dark-600",
-                secondary: "bg-white border-light-200",
+                secondary: "bg-light-100 border-light-200",
             },
 
             layout: {
@@ -169,7 +169,11 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
                             <input
                                 id={id}
                                 ref={inputRef}
-                                className={twMerge(inputStyles({ variant, state }), className)}
+                                className={twMerge(
+                                    variant === "primary" ? "tf-autofill-dark" : "tf-autofill-light",
+                                    inputStyles({ variant, state }),
+                                    className
+                                )}
                                 placeholder={placeholder}
                                 type={finalType}
                                 onChange={handleChange}

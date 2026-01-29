@@ -1,3 +1,7 @@
+:root {
+    --header-height: 90px;
+}
+
 @theme inline {
     --color-bg-main: #1E1C26;
     --color-bg-secondary: #211E2B;
@@ -15,6 +19,7 @@
 
     --color-light-100: #FFFFFF;
     --color-light-200: #D8E0F0;
+    --color-light-300: #BFBFBF;
     --color-light-500: #7D8592;
 
     --color-success-500: #17AF26;
