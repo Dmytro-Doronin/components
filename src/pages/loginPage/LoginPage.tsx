@@ -1,4 +1,11 @@
-import {LoginForm} from "../../components/auth/loginForm/LoginForm.tsx";
+import {SignUpForm} from "../../components/auth/signUpForm/SignUpForm.tsx";
+
+export type SignUpData = {
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+}
 
 export type loginData = {
     email: string,
@@ -8,7 +15,7 @@ export type loginData = {
 export const LoginPage = () => {
 
 
-    const onSubmit = (data: loginData) => {
+    const onSubmit = (data: SignUpData) => {
         console.log(data)
     }
 
@@ -16,7 +23,7 @@ export const LoginPage = () => {
         <div
             className='auth-page'
         >
-            <LoginForm loading={false} onSubmit={onSubmit} title='SIGN IN' />
+            <SignUpForm loading={false} onSubmit={onSubmit} title='SIGN UP' />
         </div>
     );
 };
