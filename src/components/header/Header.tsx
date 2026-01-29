@@ -11,7 +11,7 @@ export const Header = () => {
                 backdrop-blur-[12px]
       "
         >
-            <div className="flex items-center justify-between mx-auto max-w-[1440px] h-full px-4">
+            <div className="flex items-center justify-between mx-auto max-w-[1440px] h-full px-[151px]">
                 <Logo/>
                 <div
                     className='flex justify-center gap-7 border border-[#ffffff15] rounded-[20px] px-[38px]'
