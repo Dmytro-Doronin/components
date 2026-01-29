@@ -8,7 +8,7 @@ export default function Footer({ className }: { className?: string }) {
             Our platform offers an easy-to-use learning experience with video lessons, live video calls, and fast, secure payments — all in one place.
           </p>
         </div>
-        
+
         <div className="w-full lg:w-36">
           <h4 className="text-sm opacity-65 mb-4">Legal</h4>
           <div className="text-base space-y-2">
