@@ -1,18 +1,19 @@
 import './App.css'
-
+import {Home} from "./pages/Home/Home.tsx";
 import {Header} from "./components/header/Header.tsx";
-import {SignUpPage} from "./pages/signUpPage/SignUpPage.tsx";
+import Footer from "../src/components/footer/Footer.tsx";
+// import {SignUpPage} from "./pages/signUpPage/SignUpPage.tsx";
 
 function App() {
-  // return <Home />
     return (
         <>
+            <Home/>
             <Header/>
-            <main className="pt-[var(--header-height)]">
-                <SignUpPage/>
-            </main>
+            <Footer/>
+            {/*<main className="pt-[var(--header-height)]">*/}
+            {/*    <SignUpPage/>*/}
+            {/*</main>*/}
         </>
-
     )
 }
 
