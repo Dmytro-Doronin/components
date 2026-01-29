@@ -15,7 +15,7 @@ const subjects = [
 export const PopularSubjects = () => {
   return (
     <section className="relative section-spacing overflow-hidden">
-      <div className="absolute inset-0 z-0 px-[32px]">
+      <div className="absolute inset-0 z-0 px-4 sm:px-6 lg:px-8 hidden xl:block">
         <img 
           src={bgImage} 
           alt="Background" 
@@ -23,8 +23,28 @@ export const PopularSubjects = () => {
         />
       </div>
 
-      <div className="relative z-10 container-centered mx-auto px-[24px]">
-        <div className="grid grid-cols-2 gap-[64px] items-start max-w-7xl mx-auto">
+      <div className="relative z-10 container-centered mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:hidden flex flex-col items-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-10">
+            <span className="text-gradient">
+              Popular subjects & Languages
+            </span>
+          </h2>
+          
+          <p className="text-white/70 text-base sm:text-lg text-center max-w-67 leading-relaxed mb-7">
+            On our platform, you can learn a wide range of foreign languages and programming subjects — all in one place.
+          </p>
+          
+          <Button variant="secondary" className="mb-8">Start</Button>
+          
+          <div className="flex flex-col gap-3.5 w-full max-w-md">
+            {subjects.map((subject, index) => (
+              <SubjectCard key={index} title={subject} />
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden lg:grid lg:grid-cols-2 gap-[64px] items-start max-w-7xl mx-auto">
           <div className="flex flex-col gap-[350px] -mt-[60px]">
             <div>
               <p className="text-white/70 text-base w-[270px] h-[108px] leading-relaxed mb-[24px]">
