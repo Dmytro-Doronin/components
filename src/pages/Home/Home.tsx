@@ -2,6 +2,7 @@ import { Hero } from '../../components/sections/Hero/Hero';
 import { Features } from '../../components/sections/Features/Features';
 import {PopularSubjects} from "../../components/sections/PopularSubjects/PopularSubjects.tsx";
 import {Reviews} from "../../components/sections/Reviews/Reviews.tsx";
+import Footer from "../../components/footer/Footer.tsx";
 
 export const Home = () => {
     // const indexChange = (page: number) => {
@@ -20,6 +21,7 @@ export const Home = () => {
             <Features />
             <PopularSubjects />
             <Reviews/>
+            <Footer/>
         </div>
     );
 };
