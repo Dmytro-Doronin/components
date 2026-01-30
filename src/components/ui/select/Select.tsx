@@ -1,6 +1,7 @@
 import * as Select from '@radix-ui/react-select';
 import * as React from 'react';
 import ArrowDown from "../../icons/ArrowDown.tsx";
+import {type ComponentPropsWithoutRef, type ComponentRef, forwardRef} from "react";
 
 
 export type Option<TValue extends string = string> = {
@@ -8,9 +9,9 @@ export type Option<TValue extends string = string> = {
     value: TValue;
 };
 
-const SelectItem = React.forwardRef<
-    React.ComponentRef<typeof Select.Item>,
-    React.ComponentPropsWithoutRef<typeof Select.Item>
+const SelectItem = forwardRef<
+    ComponentRef<typeof Select.Item>,
+    ComponentPropsWithoutRef<typeof Select.Item>
 >(({ children, ...props }, forwardedRef) => {
     return (
         <Select.Item
