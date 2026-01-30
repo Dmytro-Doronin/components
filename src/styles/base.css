@@ -2,7 +2,13 @@
     *, *::before, *::after {
         box-sizing: border-box;
     }
-
+    html {
+        scrollbar-gutter: stable;
+    }
+    body[data-scroll-locked] {
+        overflow: visible !important;
+        margin-right: 0 !important;
+    }
     html, body {
         height: 100%;
     }
