@@ -18,11 +18,21 @@ export const Home = () => {
             {/*    ]*/}
             {/*}/>*/}
             {/*<Pagination theme='primary' shape='round' activeIndex={1} totalPages={20} onIndexChange={indexChange} siblings={2}/>*/}
-            <Hero />
-            <Features />
-            <OurClients />
-            <PopularSubjects />
-            <Reviews/>
+            <section className="section-spacing">
+                <Hero />
+            </section>
+            <section className="section-spacing">
+                <Features />
+            </section>
+            <section className="section-spacing">
+                <PopularSubjects />
+            </section>
+            <section className="section-spacing">
+                <OurClients />
+            </section>
+            <section className="section-spacing">
+                <Reviews/>
+            </section>
         </div>
     );
 };
