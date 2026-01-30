@@ -94,6 +94,7 @@ export const SelectComponent = <TValue extends string = string>({
                     align="start"
                     sideOffset={20}
                     position="popper"
+                    avoidCollisions={false}
                     className="
                         z-50
                         w-[var(--radix-select-trigger-width)]
