@@ -21,16 +21,16 @@ export const Home = () => {
             <section className="section-spacing">
                 <Hero />
             </section>
-            <section className="section-spacing">
+            <section className="section-spacing relative z-10 bg-bg-main">
                 <Features />
             </section>
-            <section className="section-spacing">
+            <section className="section-spacing relative z-10 bg-bg-main">
                 <PopularSubjects />
             </section>
-            <section className="section-spacing">
+            <section className="section-spacing relative z-10 bg-bg-main">
                 <OurClients />
             </section>
-            <section className="section-spacing">
+            <section className="section-spacing relative z-10 bg-bg-main">
                 <Reviews/>
             </section>
         </div>
