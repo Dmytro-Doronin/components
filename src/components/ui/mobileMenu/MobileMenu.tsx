@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
 import menuIcon from '../../../assets/icons/Menu Button.svg';
 import crossIcon from '../../../assets/icons/cross.svg';
 
@@ -28,79 +29,46 @@ const MobileMenuItem: React.FC<MobileMenuItemProps> = ({ children, onClick }) =>
 );
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        onClose();
-      }
-    };
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
-
   return (
-    <>
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden" />
-      <div
-        ref={menuRef}
-        className="
+    <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden" />
+        <Dialog.Content className="
           fixed top-0 right-0 h-full w-80 max-w-[80vw]
           bg-[#15141D] backdrop-blur-[12px]
           z-50 transform transition-transform duration-300 ease-in-out
-          lg:hidden
+          md:hidden
           shadow-2xl
-        "
-      >
-        <div className="flex items-center justify-between p-6 border-b border-[#ffffff15]">
-          <h2 className="text-xl font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="
-              p-2 rounded-lg
-              text-[#ffffff60] hover:text-light-100
-              hover:bg-[#ffffff15]
-              transition-all duration-200
-            "
-            aria-label="Close menu"
-          >
-            <img src={crossIcon} alt="Close" className="w-6 h-6" />
-          </button>
-        </div>
+        ">
+          <div className="flex items-center justify-between p-6 border-b border-[#ffffff15]">
+            <Dialog.Title className="text-xl font-semibold text-white">Menu</Dialog.Title>
+            <Dialog.Close
+              className="
+                p-2 rounded-lg
+                text-[#ffffff60] hover:text-light-100
+                hover:bg-[#ffffff15]
+                transition-all duration-200
+              "
+              aria-label="Close menu"
+            >
+              <img src={crossIcon} alt="Close" className="w-6 h-6" />
+            </Dialog.Close>
+          </div>
 
-        <nav className="py-4">
-          <MobileMenuItem onClick={onClose}>
-            <span className="font-medium">Tutors</span>
-          </MobileMenuItem>
-          <MobileMenuItem onClick={onClose}>
-            <span className="font-medium">I want be tutor</span>
-          </MobileMenuItem>
-          <MobileMenuItem onClick={onClose}>
-            <span className="font-medium">Sign in</span>
-          </MobileMenuItem>
-        </nav>
-
-      </div>
-    </>
+          <nav className="py-4">
+            <MobileMenuItem onClick={onClose}>
+              <span className="font-medium">Tutors</span>
+            </MobileMenuItem>
+            <MobileMenuItem onClick={onClose}>
+              <span className="font-medium">I want be tutor</span>
+            </MobileMenuItem>
+            <MobileMenuItem onClick={onClose}>
+              <span className="font-medium">Sign in</span>
+            </MobileMenuItem>
+          </nav>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 };
 
@@ -117,10 +85,10 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ onClick, isOpen }) => (
       text-[#ffffff60] hover:text-light-100
       hover:bg-[#ffffff15]
       transition-all duration-200
-      lg:hidden
+      md:hidden
     "
     aria-label={isOpen ? 'Close menu' : 'Open menu'}
   >
-    <img src={menuIcon} alt="Menu" className="w-6 h-6" />
+    <img src={menuIcon} alt="Menu" className="w-8 h-8" />
   </button>
 );
