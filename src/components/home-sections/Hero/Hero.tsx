@@ -14,12 +14,12 @@ const subjects = [
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-22.5">
+      <div className="fixed inset-0 z-0">
         <img 
           src={heroImage} 
           alt="learn" 
-          className="w-full h-full object-cover scale-110"
+          className="w-full h-full object-cover object-top scale-110"
         />
       </div>
 
