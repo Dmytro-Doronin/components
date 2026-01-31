@@ -40,7 +40,7 @@ export const TeacherCard = ({teacher}: TeacherCardType) => {
             <div className='flex flex-col items-center gap-[15px] pl-[37px]'>
                 <span className='text-[36px] text-light-100'>{price} euro</span>
                 <span className='text-[20px] text-dark-400'>1 hour</span>
-                <Rating/>
+                <Rating rating={5}/>
                 <Button variant='secondary'>Book</Button>
                 <span className='text-[14px] text-dark-400'>First lesson - free</span>
             </div>

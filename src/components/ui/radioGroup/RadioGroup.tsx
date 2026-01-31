@@ -19,7 +19,7 @@ const RadioGroupItem = forwardRef<
         <RadioGroupPrimitive.Item
             ref={ref}
             className={[
-                "peer relative h-5 w-5 shrink-0 rounded-full",
+                "peer relative h-5 w-5 shrink-0 rounded-full  cursor-pointer",
                 "border-2 border-light-100",
                 "outline-none",
                 "focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2",

@@ -3,6 +3,7 @@ import * as CheckboxRadix from '@radix-ui/react-checkbox'
 import * as LabelRadix from '@radix-ui/react-label'
 import Check from "../../icons/Check.tsx";
 import {twMerge} from "tailwind-merge";
+import type {ReactNode} from "react";
 
 
 
@@ -12,7 +13,7 @@ export type CheckboxProps = {
     onValueChange?: (checked: boolean) => void
     disabled?: boolean
     required?: boolean
-    label?: string
+    label?: ReactNode
     id?: string
     position?: 'left'
 }
@@ -48,7 +49,7 @@ export const Checkbox = ({
                             required={required}
                             id={id}
                         >
-                            <CheckboxRadix.Indicator forceMount className="text-blue-500">
+                            <CheckboxRadix.Indicator forceMount>
                                 <Check className="w-4 h-4 text-light-100" />
                             </CheckboxRadix.Indicator>
                         </CheckboxRadix.Root>

@@ -55,6 +55,7 @@ export const SliderRange = forwardRef<
                         aria-label="Min"
                         className="
                           block
+                          cursor-pointer
                           w-[8px] h-[8px]
                           rounded-full
                           border-2 border-black
@@ -70,6 +71,7 @@ export const SliderRange = forwardRef<
                           block
                           w-[8px] h-[8px]
                           rounded-full
+                          cursor-pointer
                           border-2 border-black
                           bg-white
                           shadow-[0px_4px_8px_0px_rgba(0,0,0,0.1)]
