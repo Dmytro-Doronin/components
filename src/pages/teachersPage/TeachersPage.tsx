@@ -1,5 +1,7 @@
 import Person from '../../assets/images/person.jpg'
 import {CardsList} from "../../components/cardsList/CardsList.tsx";
+import {useState} from "react";
+import {SliderRange} from "../../components/ui/sliderRange/SliderRange.tsx";
 
 export type TeacherType = {
     id: string,
@@ -88,6 +90,12 @@ const teachers: TeacherType[] = [
 
 
 export const TeachersPage = () => {
+    const [value, setValue] = useState([0, 500])
+
+    const handleSliderCommitted = (value: number[]) => {
+        setValue(value)
+    }
+
     return (
         <div className="flex items-center flex-col justify-center w-full max-w-[1440px] mx-auto mt-[80px] px-[80px]">
             <h1 className='auth-title'>OUR TEACHERS</h1>
@@ -96,7 +104,17 @@ export const TeachersPage = () => {
                 flexible learning, and professional support.
                 From beginners to advanced learners, our clients see real progress and lasting results.
             </h3>
-            <CardsList cards={teachers}/>
+            <div>
+                <SliderRange
+                    min={0}
+                    max={500}
+                    value={value}
+                    onValueChange={setValue}
+                    onValueCommit={handleSliderCommitted}
+                />
+                <CardsList cards={teachers}/>
+            </div>
+
         </div>
     );
 };
