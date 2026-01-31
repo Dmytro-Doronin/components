@@ -2,6 +2,7 @@ import Person from '../../assets/images/person.jpg'
 import {CardsList} from "../../components/cardsList/CardsList.tsx";
 import {useState} from "react";
 import {SliderRange} from "../../components/ui/sliderRange/SliderRange.tsx";
+import {Checkbox} from "../../components/ui/checkbox/Checkbox.tsx";
 
 export type TeacherType = {
     id: string,
@@ -91,6 +92,7 @@ const teachers: TeacherType[] = [
 
 export const TeachersPage = () => {
     const [value, setValue] = useState([0, 500])
+    const [checked, setChecked] = useState(false)
 
     const handleSliderCommitted = (value: number[]) => {
         setValue(value)
@@ -105,6 +107,7 @@ export const TeachersPage = () => {
                 From beginners to advanced learners, our clients see real progress and lasting results.
             </h3>
             <div>
+                <Checkbox checked={checked} onValueChange={setChecked} />
                 <SliderRange
                     min={0}
                     max={500}
