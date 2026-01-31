@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <Header/>
-            <main className="pt-[var(--header-height)]">
+            <main className="pt-[var(--header-height)] pb-[200px]">
                 <TeachersPage/>
             </main>
             {/*<Home/>*/}
