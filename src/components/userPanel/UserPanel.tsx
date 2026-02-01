@@ -52,7 +52,7 @@ export const ControlPanel = ({classNames}: ControlPanelTypes) => {
                         className="flex justify-start gap-[10px] w-full rounded-[40px] p-[10px] transition-none
                         hover:text-[var(--color-dark-900)] hover:bg-[var(--color-purple-500)]
                         "
-                        to='/register/student'
+                        to='/login/student'
                         variant='link'
                         onClick={() => setOpenMenu((prev) => !prev)}
                 >
@@ -63,7 +63,7 @@ export const ControlPanel = ({classNames}: ControlPanelTypes) => {
                     className="flex justify-start gap-[10px]  w-full rounded-[40px] p-[10px] transition-none
                                 hover:text-[var(--color-dark-900)] hover:bg-[var(--color-purple-500)]
                                "
-                    to='/register/tutor'
+                    to='/login/tutor'
                     variant='link'
                     onClick={() => setOpenMenu((prev) => !prev)}
                 >
