@@ -1,6 +1,8 @@
 import Person from '../../assets/images/person.jpg'
 import {CardsList} from "../../components/cardsList/CardsList.tsx";
 import {Filters} from "../../components/filters/Filters.tsx";
+import {Pagination} from "../../components/ui/pagination/Pagination.tsx";
+import {useState} from "react";
 
 export type TeacherType = {
     id: string,
@@ -17,7 +19,7 @@ const teachers: TeacherType[] = [
     {
         id: '1',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -27,7 +29,7 @@ const teachers: TeacherType[] = [
     {
         id: '2',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -37,7 +39,7 @@ const teachers: TeacherType[] = [
     {
         id: '3',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -47,7 +49,7 @@ const teachers: TeacherType[] = [
     {
         id: '4',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -57,7 +59,7 @@ const teachers: TeacherType[] = [
     {
         id: '5',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -67,7 +69,7 @@ const teachers: TeacherType[] = [
     {
         id: '6',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -77,7 +79,7 @@ const teachers: TeacherType[] = [
     {
         id: '7',
         name: 'Els Menson',
-        subject: 'Emglish',
+        subject: 'English',
         price: 35,
         image: Person,
         experience: '12 years',
@@ -89,6 +91,9 @@ const teachers: TeacherType[] = [
 
 
 export const TeachersPage = () => {
+    const [activeIndex, setActiveIndex] = useState(1)
+
+
     return (
         <div className="flex items-center flex-col justify-center w-full max-w-[1440px] mx-auto mt-[80px] px-[80px]">
             <h1 className='auth-title'>OUR TEACHERS</h1>
@@ -99,7 +104,15 @@ export const TeachersPage = () => {
             </h3>
             <div className='flex items-start gap-[40px]'>
                 <Filters/>
-                <CardsList cards={teachers}/>
+                <div className='flex flex-col gap-[40px]'>
+                    <CardsList cards={teachers}/>
+                    <div className='flex flex-col items-center gap-[20px]'>
+                        <h4 className='text-[24px] text-light-100'>1,500 profiles found</h4>
+                        <Pagination activeIndex={activeIndex} onIndexChange={setActiveIndex} totalPages={20}/>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     );

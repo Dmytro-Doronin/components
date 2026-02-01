@@ -11,10 +11,6 @@ function App() {
             <main className="pt-[var(--header-height)] pb-[200px]">
                 <TeachersPage/>
             </main>
-            {/*<Home/>*/}
-            {/*<main className="pt-[var(--header-height)]">*/}
-            {/*    <SignUpPage/>*/}
-            {/*</main>*/}
             <Footer/>
         </>
     )

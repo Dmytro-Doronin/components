@@ -37,7 +37,7 @@ export const Filters = () => {
 
     return (
         <div className='bg-purple-600 max-w-[312px] w-full p-[20px] rounded-[30px]'>
-            <h4 className='text-light-100 text-[12px] mb-[20px]'>Filters</h4>
+            <h4 className='text-light-100 text-[18px] mb-[20px]'>Filters</h4>
             <div className='
                     flex flex-col items-start py-[20px] mr-[30px] mb-[20px]
                     border-light-100 border-b-[1px] border-t-[1px]

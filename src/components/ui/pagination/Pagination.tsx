@@ -96,7 +96,7 @@ export const Pagination = ({
                         return (
                             <span
                                 key={idx}
-                                className={twMerge(paginationButtonStyles({ theme, shape, state: "inactive" }), 'bg-transparent hover:bg-transparent')}
+                                className={twMerge(paginationButtonStyles({ theme, shape, state: "inactive" }), 'bg-transparent hover:bg-transparent text-light-100')}
                             >
                                 ...
                             </span>
