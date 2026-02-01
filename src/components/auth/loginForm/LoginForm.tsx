@@ -6,15 +6,17 @@ import {loginSchema} from "./loginForm.validation.ts";
 import {ControlledTextField} from "../../ui/controlled/controlledTextField/ControlledTextField.tsx";
 import {Button} from "../../ui/button/Button.tsx";
 import Google from "../../icons/Google.tsx";
+import type {Role} from "../types.ts";
 
 
 type LoginFormTypes = {
     loading: boolean;
     title: string;
-    onSubmit: (data: loginData) => void;
+    role: Role;
+    onSubmit: (data: loginData & {role: Role}) => void;
 }
 
-export const LoginForm = ({loading, onSubmit, title}: LoginFormTypes) => {
+export const LoginForm = ({loading, onSubmit, title, role}: LoginFormTypes) => {
     const { control, handleSubmit, reset } = useForm<FormValues>({
         resolver: zodResolver(loginSchema),
         defaultValues: {
@@ -25,7 +27,7 @@ export const LoginForm = ({loading, onSubmit, title}: LoginFormTypes) => {
 
 
     const onSubmitForm = (data: loginData) => {
-        onSubmit(data);
+        onSubmit({...data, role});
         reset();
     };
 

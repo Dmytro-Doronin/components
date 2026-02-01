@@ -1,4 +1,5 @@
 import {SignUpForm} from "../../components/auth/signUpForm/SignUpForm.tsx";
+import type {Role} from "../../components/auth/types.ts";
 
 export type SignUpData = {
     firstName: string;
@@ -7,18 +8,23 @@ export type SignUpData = {
     password: string;
 }
 
-export const SignUpPage = () => {
+export const SignUpPage = ({ role }: { role: Role }) => {
 
 
-    const onSubmit = (data: SignUpData) => {
-        console.log(data)
+    const onSubmit = (data: SignUpData & {role: Role}) => {
+        console.log({...data, role})
     }
 
     return (
         <div
             className='auth-page'
         >
-            <SignUpForm loading={false} onSubmit={onSubmit} title='SIGN UP' />
+            <SignUpForm
+                loading={false}
+                onSubmit={onSubmit}
+                title={role === 'tutor' ? 'SIGN UP AS A TUTOR': 'SIGN UP'}
+                role={role}
+            />
         </div>
     );
 };

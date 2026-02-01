@@ -1,14 +1,15 @@
 import {LoginForm} from "../../components/auth/loginForm/LoginForm.tsx";
+import type {Role} from "../../components/auth/types.ts";
 
 export type loginData = {
     email: string,
     password: string,
 }
 
-export const LoginPage = () => {
+export const LoginPage = ({role}: {role: Role}) => {
 
 
-    const onSubmit = (data: loginData) => {
+    const onSubmit = (data: loginData & {role: Role}) => {
         console.log(data)
     }
 
@@ -16,7 +17,7 @@ export const LoginPage = () => {
         <div
             className='auth-page'
         >
-            <LoginForm loading={false} onSubmit={onSubmit} title='Login' />
+            <LoginForm loading={false} onSubmit={onSubmit} title={role === 'tutor' ? 'LOGIN AS A TUTOR': 'LOGIN'} role={role} />
         </div>
     );
 };

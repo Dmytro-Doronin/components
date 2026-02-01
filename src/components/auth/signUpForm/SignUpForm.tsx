@@ -1,4 +1,3 @@
-import type {SignUpData} from "../../../pages/loginPage/LoginPage.tsx";
 import {useForm} from "react-hook-form";
 import type {FormValues} from "./signUpFormTypes.ts";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -6,15 +5,18 @@ import {ControlledTextField} from "../../ui/controlled/controlledTextField/Contr
 import {Button} from "../../ui/button/Button.tsx";
 import Google from "../../icons/Google.tsx";
 import {signUpSchema} from "./signUpForm.validation.ts";
+import type {Role} from "../types.ts";
+import type {SignUpData} from "../../../pages/signUpPage/SignUpPage.tsx";
 
 
 type SignUpFormTypes = {
     loading: boolean;
     title: string;
-    onSubmit: (data: SignUpData) => void;
+    role: Role;
+    onSubmit: (data: SignUpData & {role: Role}) => void;
 }
 
-export const SignUpForm = ({loading, onSubmit, title}: SignUpFormTypes) => {
+export const SignUpForm = ({loading, onSubmit, title, role}: SignUpFormTypes) => {
     const { control, handleSubmit, reset } = useForm<FormValues>({
         resolver: zodResolver(signUpSchema),
         defaultValues: {
@@ -27,7 +29,7 @@ export const SignUpForm = ({loading, onSubmit, title}: SignUpFormTypes) => {
 
 
     const onSubmitForm = (data: SignUpData) => {
-        onSubmit(data);
+        onSubmit({...data, role});
         reset();
     };
 

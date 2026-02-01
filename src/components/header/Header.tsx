@@ -5,7 +5,7 @@ import { MobileMenu, MenuButton } from "../ui/mobileMenu/MobileMenu.tsx";
 
 export const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+    const isAuth = true;
     const handleMobileMenuToggle = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -30,7 +30,12 @@ export const Header = () => {
                         <Button className='p-0 text-[#ffffff60] hover:text-light-100' variant='link'>Tutors</Button>
                         <Button className='p-0 text-[#ffffff60] hover:text-light-100' variant='link'>I want be tutor</Button>
                     </div>
-                    <Button variant='secondary' className='hidden lg:block'>Sign in</Button>
+                    {isAuth ? (
+                        <div>is auth </div>
+                    ) : (
+                        <Button variant='secondary' className='hidden lg:block'>Sign in</Button>
+                    )}
+
                     <MenuButton 
                         onClick={handleMobileMenuToggle}
                         isOpen={isMobileMenuOpen}
