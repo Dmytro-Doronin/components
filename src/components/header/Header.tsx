@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { Logo } from "../logo/Logo.tsx";
 import { Button } from "../ui/button/Button.tsx";
 import { MobileMenu, MenuButton } from "../ui/mobileMenu/MobileMenu.tsx";
+import {ControlPanel} from "../userPanel/UserPanel.tsx";
 
 export const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const isAuth = true;
+    const isAuth = false;
     const handleMobileMenuToggle = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -33,9 +34,8 @@ export const Header = () => {
                     {isAuth ? (
                         <div>is auth </div>
                     ) : (
-                        <Button variant='secondary' className='hidden lg:block'>Sign in</Button>
+                        <ControlPanel classNames=''/>
                     )}
-
                     <MenuButton 
                         onClick={handleMobileMenuToggle}
                         isOpen={isMobileMenuOpen}
