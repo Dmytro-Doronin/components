@@ -12,7 +12,7 @@ export const SliderRange = forwardRef<
 >(({ className, value, onValueChange, min, max, ...props }, ref) => {
 
     return (
-        <div className="flex flex-col gap-2 max-w-[275px]">
+        <div className="flex flex-col gap-2 w-full max-w-[200px] sm:max-w-[275px]">
             <label  className="flex items-center justify-between">
                 <span className="text-sm text-light-100">{props.label}</span>
             </label>
@@ -29,7 +29,7 @@ export const SliderRange = forwardRef<
                     onValueChange={onValueChange}
                     className={twMerge(
                         "relative flex items-center select-none touch-none",
-                        "w-[272px] h-[20px]",
+                        "w-full h-[20px]",
                         className
                     )}
                     {...props}
