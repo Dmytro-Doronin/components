@@ -47,7 +47,7 @@ export const TeacherDetail = () => {
   return (
     <div className="h-auto">
 
-      <div className="container-centered mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="pt-20 container-centered mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="section-spacing">
           <Button variant="secondary" onClick={handleBack} className="h-auto">
             Back
