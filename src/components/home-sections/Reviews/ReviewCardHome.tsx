@@ -7,7 +7,7 @@ interface ReviewCardProps {
   review: string;
 }
 
-export const ReviewCard = ({ avatar, name, course, review }: ReviewCardProps) => {
+export const ReviewCardHome = ({ avatar, name, course, review }: ReviewCardProps) => {
   return (
       <div className="w-full max-w-[343px] mx-auto">
         <div className="bg-[#15141D] rounded-2xl p-[25px] flex flex-col h-auto">
