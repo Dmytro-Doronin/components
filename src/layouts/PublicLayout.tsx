@@ -6,7 +6,7 @@ export const PublicLayout = () => {
     return (
         <>
             <Header/>
-            <main className="pt-[var(--header-height)] pb-[200px]">
+            <main className="pt-[var(--header-height)]">
                 <Outlet/>
             </main>
             <Footer/>

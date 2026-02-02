@@ -4,7 +4,7 @@ export const PrivateLayout = () => {
     return (
         <>
             <div>Private header</div>
-            <main className="pt-[var(--header-height)] pb-[200px]">
+            <main className="pt-[var(--header-height)]">
                 <Outlet/>
             </main>
             <div>Private footer</div>
