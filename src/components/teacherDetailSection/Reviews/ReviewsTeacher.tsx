@@ -1,4 +1,5 @@
-import {ReviewCard} from './ReviewCard';
+import {ReviewCardTeacher} from './ReviewCardTeacher';
+import { Button } from '../../ui/button/Button';
 import avatar1 from '../../../assets/images/Avatar.png';
 import avatar2 from '../../../assets/images/Avatar2.png';
 import avatar3 from '../../../assets/images/Avatar3.png';
@@ -22,10 +23,22 @@ const reviews = [
         name: 'Darrell Steward',
         course: 'QA / Software Testing',
         review: 'The classes are engaging and focused on real communication. Students see noticeable improvement.',
+    },
+    {
+        avatar: avatar1,
+        name: 'Jacob Jones',
+        course: 'Spanish',
+        review: 'The classes are engaging and focused on real communication. Students see noticeable improvement.',
+    },
+    {
+        avatar: avatar2,
+        name: 'Marvin McKinney',
+        course: 'French',
+        review: 'The classes are engaging and focused on real communication. Students see noticeable improvement.',
     }
 ];
 
-export const Reviews = () => {
+export const ReviewsTeacher = () => {
     return (
         <section className="section-spacing py-12 sm:py-16 lg:py-20">
             <div className="container-centered mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,27 +54,24 @@ export const Reviews = () => {
                 </div>
 
                 <div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 max-w-7xl mx-auto">
+                    className="flex flex-col gap-8 sm:gap-8 md:gap-8 lg:gap-12 w-full">
                     {reviews.map((review, index) => (
                         <div
                             key={index}
-                            className={`
-      relative flex justify-center
-      ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}
-    `}
+                            className="relative flex justify-center w-full px-[15px] sm:px-[10px] md:px-[5px]"
                         >
-                            <div className="relative z-10">
-                                <ReviewCard {...review} />
+                            <div className="relative z-10 w-full">
+                                <ReviewCardTeacher {...review} />
                             </div>
 
                             <img
                                 src={shapeImage}
                                 alt=""
                                 className="
-        absolute bottom-[-20px] sm:bottom-[-25px]
-        left-1/2 -translate-x-1/2
-        w-[280px] sm:w-[350px] lg:w-[393px]
-        h-[90px] sm:h-[100px] lg:h-[110px]
+        absolute -bottom-[3px] sm:-bottom-[5px] md:-bottom-[7px] lg:-bottom-[5px] -left-[0px] sm:-left-[2px] md:-left-[5px] lg:-left-[0px] -right-[30px] sm:-right-[25px] md:-right-[20px] lg:-right-[50px]
+        top-[8px] sm:top-[6px] md:top-[4px] lg:top-[10px]
+        w-[calc(100%+30px)] sm:w-[calc(100%+27px)] md:w-[calc(100%+25px)] lg:w-[calc(100%+50px)]
+        h-[calc(100%+11px)] sm:h-[calc(100%+11px)] md:h-[calc(100%+11px)] lg:h-[calc(100%+15px)]
         object-cover rounded-2xl
         z-0 pointer-events-none
       "
@@ -69,6 +79,12 @@ export const Reviews = () => {
                         </div>
                     ))}
 
+                </div>
+
+                <div className="flex justify-center mt-12 sm:mt-16 md:mt-20 lg:mt-12">
+                    <Button variant="secondary">
+                        More
+                    </Button>
                 </div>
             </div>
         </section>

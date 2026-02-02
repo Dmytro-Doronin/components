@@ -8,7 +8,7 @@ import TeacherSchedule from "../../components/teacherDetailSection/teacherSchedu
 import type {TeacherType} from "../../pages/teachersPage/TeachersPage.tsx";
 import Person from "../../assets/images/person.jpg";
 import { useState } from 'react';
-import {Reviews} from "../../components/home-sections/Reviews/Reviews.tsx";
+import { ReviewsTeacher } from "../../components/teacherDetailSection/Reviews/ReviewsTeacher.tsx";
 
 const teacher: TeacherType = {
     id: '1',
@@ -47,7 +47,7 @@ export const TeacherDetail = () => {
   return (
     <div className="h-auto">
 
-      <div className="container-centered mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="pt-20 container-centered mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="section-spacing">
           <Button variant="secondary" onClick={handleBack} className="h-auto">
             Back
@@ -61,7 +61,7 @@ export const TeacherDetail = () => {
           {renderContent()}
         </div>
           <section className="section-spacing relative z-10 bg-bg-main">
-              <Reviews/>
+              <ReviewsTeacher/>
           </section>
       </div>
     </div>

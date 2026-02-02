@@ -1,7 +1,7 @@
 import { Hero } from '../../components/home-sections/Hero/Hero';
 import { Features } from '../../components/home-sections/Features/Features';
 import {PopularSubjects} from "../../components/home-sections/PopularSubjects/PopularSubjects.tsx";
-import {Reviews} from "../../components/home-sections/Reviews/Reviews.tsx";
+import {ReviewsHome} from "../../components/home-sections/Reviews/ReviewsHome.tsx";
 import {OurClients} from "../../components/home-sections/OurClients/OurClients.tsx";
 
 
@@ -31,7 +31,7 @@ export const Home = () => {
                 <OurClients />
             </section>
             <section className="section-spacing relative z-10 bg-bg-main">
-                <Reviews/>
+                <ReviewsHome/>
             </section>
         </div>
     );
