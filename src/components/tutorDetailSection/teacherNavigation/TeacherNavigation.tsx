@@ -2,8 +2,16 @@ import { useState } from 'react';
 
 type TabType = 'about' | 'subjects' | 'schedule';
 
-export const TeacherNavigation = () => {
-  const [activeTab, setActiveTab] = useState<TabType>('subjects');
+interface TeacherNavigationProps {
+  activeTab?: TabType;
+  onTabChange?: (tab: TabType) => void;
+}
+
+export const TeacherNavigation = ({ activeTab: externalActiveTab, onTabChange }: TeacherNavigationProps) => {
+  const [internalActiveTab, setInternalActiveTab] = useState<TabType>('subjects');
+  
+  const activeTab = externalActiveTab || internalActiveTab;
+  const setActiveTab = onTabChange || setInternalActiveTab;
 
   const tabs = [
     { id: 'subjects', label: 'Subjects' },
