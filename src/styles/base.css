@@ -4,6 +4,7 @@
     }
     html {
         scrollbar-gutter: stable;
+        font-family: 'Raleway', system-ui, sans-serif;
     }
     body[data-scroll-locked] {
         overflow: visible !important;
@@ -16,6 +17,7 @@
     body {
         margin: 0;
         background-color: #1E1C26;
+        font-family: 'Raleway', system-ui, sans-serif;
     }
 
     h1, h2, h3, h4, h5, h6, p,

@@ -3,3 +3,10 @@
 @import "./styles/components.css";
 @import "./styles/theme.css";
 @import "./styles/auth.css";
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('../../components/src/assets/fonts/Raleway-Italic-VariableFont_wght.ttf');
+}
