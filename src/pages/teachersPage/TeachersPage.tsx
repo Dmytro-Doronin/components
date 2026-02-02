@@ -95,7 +95,7 @@ export const TeachersPage = () => {
 
 
     return (
-        <div className="flex items-center flex-col justify-center w-full max-w-[1440px] mx-auto mt-[80px] px-[80px]">
+        <div className="flex items-center flex-col justify-center w-full max-w-[1440px] mx-auto mt-[80px] py-[80px] px-[80px]">
             <h1 className='auth-title'>OUR TEACHERS</h1>
             <h3 className='text-[16px] text-light-100 w-full max-w-[683px] text-center mb-[80px]'>
                 Hey choose our platform for high-quality teaching,

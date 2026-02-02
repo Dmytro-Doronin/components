@@ -11,7 +11,7 @@ export const TeacherCard = ({teacher}: TeacherCardType) => {
     const {name, subject, image, experience, education, price, approaching} = teacher
 
     return (
-        <div className='flex border border-blue-500 px-[36px] py-[36px] rounded-[25px]'>
+        <div className='flex border bg-[#15141D80] border-blue-500 px-[36px] py-[36px] rounded-[25px]'>
             <div className='flex gap-[15px] border-r border-[#ffffff10] pr-[23px]'>
                 <div className='flex flex-col gap-[15px]'>
                     <div className='w-[173px] h-[173px] overflow-hidden rounded-[25px]'>
