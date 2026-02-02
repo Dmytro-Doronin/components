@@ -23,10 +23,10 @@ export type TextFieldProps = {
     >;
 } & ComponentPropsWithoutRef<"input">;
 
-const rootStyles = cva("w-full hover:cursor-text flex flex-col items-start", {
+const rootStyles = cva("w-full hover:cursor-text flex flex-col items-center lg:items-start", {
     variants: {
         state: {
-            default: "flex flex-col items-start gap-[7px]",
+            default: "flex flex-col gap-[7px]",
             error: "text-danger",
         },
     },

@@ -51,7 +51,7 @@ export const SignUpForm = ({loading, onSubmit, title, role}: SignUpFormTypes) =>
 
                 <div className="auth-actions">
                     <div className="auth-actions-inner">
-                        <Button variant="link" className="auth-link-underline" type="button">
+                        <Button variant="link" className="auth-link-underline self-center p-0" type="button">
                             Forgot Password?
                         </Button>
                         <Button variant="secondary" size="auth" type="submit" >Sign Up</Button>
