@@ -10,7 +10,7 @@ const paginationButtonStyles = cva(
         "transition",
         "outline-none focus-visible:ring-1 focus-visible:ring-offset-1",
         "disabled:cursor-not-allowed",
-        "w-9 h-9 px-3",
+        "w-3 h-3 px-1 md:w-9 md:h-9 md:px-3",
     ].join(" "),
     {
         variants: {
@@ -42,6 +42,28 @@ const paginationButtonStyles = cva(
     }
 );
 
+const paginationNavButtonStyles = cva(
+    [
+        "text-sm font-medium transition outline-none",
+        "focus-visible:ring-1 focus-visible:ring-offset-1 p-0",
+    ].join(" "),
+    {
+        variants: {
+            theme: {
+                primary: "bg-dark-300 text-dark-900 hover:bg-dark-600",
+                secondary: "hover:bg-dark-800",
+            },
+            disabled: {
+                true: "bg-transparent text-light-100 text-light-300 opacity-[0.3]",
+                false: "",
+            },
+        },
+        defaultVariants: {
+            theme: "primary",
+            disabled: false,
+        },
+    }
+);
 
 type PaginationProps = {
   activeIndex: number
@@ -80,10 +102,10 @@ export const Pagination = ({
   }
 
     return (
-        <div className='flex items-center justify-center gap-4'>
+        <div className='flex flex-col items-start md:flex-row md:items-center  justify-center gap-4'>
             <Button
                 variant="link"
-                className={paginationButtonStyles({ theme, shape, state: "inactive" })}
+                className={paginationNavButtonStyles({ theme, disabled: isFirstPage })}
                 onClick={handlePreviousPageClicked}
                 disabled={isFirstPage}
             >
@@ -125,7 +147,7 @@ export const Pagination = ({
 
             <Button
                 variant="link"
-                className={paginationButtonStyles({ theme, shape, state: "inactive" })}
+                className={paginationNavButtonStyles({ theme, disabled: isLastPage })}
                 onClick={handleNextPageClicked}
                 disabled={isLastPage}
             >

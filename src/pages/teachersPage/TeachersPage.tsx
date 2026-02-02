@@ -110,8 +110,8 @@ export const TeachersPage = () => {
                 <div className="flex flex-col gap-[40px]">
                     <CardsList cards={teachers} />
                     <div className="flex flex-col items-center gap-[20px]">
-                        <h4 className="text-[24px] text-light-100">1,500 profiles found</h4>
-                        <Pagination activeIndex={activeIndex} onIndexChange={setActiveIndex} totalPages={20} />
+                        <h4 className="text-[18px] md:text-[24px] text-light-100">1,500 profiles found</h4>
+                        <Pagination theme={'primary'} shape={'round'} activeIndex={activeIndex} onIndexChange={setActiveIndex} totalPages={20} />
                     </div>
                 </div>
             </div>
