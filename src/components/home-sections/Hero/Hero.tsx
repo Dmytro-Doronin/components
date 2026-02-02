@@ -14,7 +14,7 @@ const subjects = [
 
 export const Hero = () => {
   return (
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-auto flex items-center justify-center overflow-hidden">
         <div className="fixed inset-0 z-0">
           <img
               src={heroImage}

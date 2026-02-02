@@ -49,15 +49,14 @@ export const TeacherDetail = () => {
   };
 
   return (
-    <div className="min-h-screen">
-
-      <div className="section-spacing pl-80">
-        <Button variant="secondary" onClick={handleBack}>
-          Back
-        </Button>
-      </div>
+    <div className="h-auto">
 
       <div className="container-centered mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div className="section-spacing">
+          <Button variant="secondary" onClick={handleBack} className="h-auto">
+            Back
+          </Button>
+        </div>
         <TeacherCard teacher={teacher}/>
         <div className="section-spacing">
           <TeacherNavigation activeTab={activeTab} onTabChange={setActiveTab} />
