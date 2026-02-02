@@ -10,7 +10,7 @@ export const Home = () => {
     //     console.log(page);
     // }
     return (
-        <div className="min-h-screen">
+        <div className="h-auto">
             {/*<RadioGroup options={*/}
             {/*    [*/}
             {/*        {label: "English", value: "english"},*/}
