@@ -21,7 +21,7 @@ export default function TeacherAbout() {
 
   return (
     <div>
-      <div className="bg-[#15141D] p-[50px] relative rounded-3xl w-auto h-auto border border-[#7286FF]">
+      <div className="bg-[#15141D] py-[40px] sm:py-[48px] px-[50px] relative rounded-3xl w-auto h-auto border border-[#7286FF]">
         <div className="flex flex-col items-center justify-center h-full">
           <div className="text-left w-full">
             <h2 

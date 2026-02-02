@@ -19,14 +19,14 @@ export function Time({ onTimeSelect }: TimeProps) {
     };
     
     return (
-        <div className="bg-[#2C2436] rounded-xl p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-white mb-6">Pick a time</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
+        <div className="bg-[#2C2436] rounded-xl p-4 sm:p-6 shadow-sm">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Pick a time</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 sm:gap-3">
                 {timeSlots.map(timeSlot => (
                     <button
                         key={timeSlot}
                         onClick={() => handleTimeClick(timeSlot)}
-                        className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                        className={`px-3 py-2 sm:px-4 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
                             selectedTime === timeSlot
                                 ? 'bg-[#7C86F7] text-white'
                                 : 'bg-[#F3F2F5] text-black hover:text-white hover:bg-[#7C86F7]'
