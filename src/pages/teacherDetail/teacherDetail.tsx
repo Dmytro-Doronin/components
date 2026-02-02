@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/ui/button/Button';
 import {TeacherCard} from "../../components/teacherCard/TeachrCard";
-import {TeacherNavigation} from "../../components/tutorDetailSection/teacherNavigation/TeacherNavigation";
-import TeacherSubjects from "../../components/tutorDetailSection/teacherSubjects/TeacherSubjects";
+import {TeacherNavigation} from "../../components/teacherDetailSection/teacherNavigation/TeacherNavigation";
+import TeacherSubjects from "../../components/teacherDetailSection/teacherSubjects/TeacherSubjects";
+import TeacherAbout from "../../components/teacherDetailSection/teacherAbout/teacherAbout";
+import TeacherSchedule from "../../components/teacherDetailSection/teacherSchedule/TeacherSchedule";
 import type {TeacherType} from "../../pages/teachersPage/TeachersPage.tsx";
 import Person from "../../assets/images/person.jpg";
 import { useState } from 'react';
@@ -34,15 +36,9 @@ export const TeacherDetail = () => {
       case 'subjects':
         return <TeacherSubjects />;
       case 'about':
-        return (
-          <div className="">
-          </div>
-        );
+        return <TeacherAbout />;
       case 'schedule':
-        return (
-          <div className="">
-          </div>
-        );
+        return <TeacherSchedule />;
       default:
         return null;
     }
