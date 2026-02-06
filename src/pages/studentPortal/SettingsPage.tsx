@@ -1,6 +1,3 @@
-import React from "react";
-import { StudentLayout } from "../../layouts/studentLayout/StudentLayout";
-
 interface settingsItems {
   label: string;
   key: string;
@@ -95,7 +92,7 @@ const contactInfo: settingsItems[] = [
 
 export const SettingsPage = () => {
   return (
-    <StudentLayout sectionTitle="Settings">
+    <>
       <div className="bg-[#16161a] rounded-[2.5rem] p-12 relative border border-white/5 shadow-[0_0_60px_-15px_rgba(114,134,255,0.35)]">
         {/* Edit Button */}
         <div className="absolute top-10 right-10 bg-[#2a2a35] p-2.5 rounded-xl cursor-pointer hover:bg-[#353545] transition-colors">
@@ -182,6 +179,6 @@ export const SettingsPage = () => {
           Save
         </button>
       </div>
-    </StudentLayout>
+    </>
   );
 };
