@@ -1,5 +1,6 @@
-import { StudentLayoutSidebar } from "../../../../../Majd/testing_Project/src/components/StudentLayoutSidebar";
-import { StudentLayoutHeader } from "../../../../../Majd/testing_Project/src/components/StudentLayoutHeader";
+import { Outlet } from "react-router-dom";
+import { StudentLayoutHeader } from "./StudentLayoutHeader.tsx";
+import { StudentLayoutSidebar } from "./StudentLayoutSidebar.tsx";
 
 export const StudentLayout = () => {
   return (
@@ -13,7 +14,9 @@ export const StudentLayout = () => {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col p-10 overflow-auto">
         <StudentLayoutHeader />
-        {children}
+
+        {}
+        <Outlet />
       </div>
     </div>
   );
