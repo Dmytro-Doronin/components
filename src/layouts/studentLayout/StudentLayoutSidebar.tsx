@@ -1,13 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 interface SidebarItem {
   name: string;
+  path?: string;
   icon: React.ReactNode;
 }
 
 const SidebarItems: SidebarItem[] = [
   {
     name: "Dashboard",
+    path: "/student/general",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,6 +30,7 @@ const SidebarItems: SidebarItem[] = [
   },
   {
     name: "My Lessons",
+    path: "/student/lessons",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +50,7 @@ const SidebarItems: SidebarItem[] = [
   },
   {
     name: "Billing",
+    path: "/student/billing",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +70,7 @@ const SidebarItems: SidebarItem[] = [
   },
   {
     name: "Video Call",
+    path: "/student/videocall",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -84,6 +90,7 @@ const SidebarItems: SidebarItem[] = [
   },
   {
     name: "Settings",
+    path: "/student/settings",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -108,26 +115,23 @@ const SidebarItems: SidebarItem[] = [
   },
 ];
 
-interface StudentLayoutSidebarProps {
-  activeTab?: string;
-}
-
-export const StudentLayoutSidebar = ({
-  activeTab,
-}: StudentLayoutSidebarProps) => {
+export const StudentLayoutSidebar = () => {
   return (
     <aside className="w-64 bg-[#211C27] flex flex-col p-8">
       <h1 className="text-2xl font-bold mb-10">ByteOn</h1>
 
       <div className="flex flex-col gap-1 text-[#474747]">
         {SidebarItems.map((item) => (
-          <div
+          <NavLink
             key={item.name}
-            className={`cursor-pointer flex items-center gap-2 px-4 py-3 rounded-xl transition-all duration-200 ${activeTab === item.name ? "bg-[#F1EEFE] text-[#7839CD] font-bold shadow-sm" : "text-[#474747] hover:bg-gray-100   hover:text-[#7839CD]    "}`}
+            to={item.path || "#"}
+            className={({ isActive }) =>
+              `cursor-pointer flex items-center gap-2 px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? "bg-[#F1EEFE] text-[#7839CD] font-bold shadow-sm" : "text-[#474747] hover:bg-gray-100   hover:text-[#7839CD]    "}`
+            }
           >
             {item.icon}
             <span>{item.name}</span>
-          </div>
+          </NavLink>
         ))}
       </div>
     </aside>
