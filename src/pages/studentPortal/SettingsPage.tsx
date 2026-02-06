@@ -113,7 +113,7 @@ export const SettingsPage = () => {
         </div>
 
         <div className="flex gap-24">
-          {/* Left Column: Main Info (Nunito Sans) */}
+          {/* Left Column: Main Info */}
           <div
             className="flex-1 flex flex-col gap-8"
             style={{ fontFamily: '"Nunito Sans", sans-serif' }}
