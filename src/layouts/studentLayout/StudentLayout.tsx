@@ -15,7 +15,6 @@ export const StudentLayout = () => {
       <div className="flex-1 flex flex-col p-10 overflow-auto">
         <StudentLayoutHeader />
 
-        {}
         <Outlet />
       </div>
     </div>
